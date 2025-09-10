@@ -13,7 +13,7 @@ Real-time system performance metrics monitoring with clean RESTful API interface
 
 🇺🇸 **English Documentation (Current)** · 📖 **[中文文档](README_CN.md)**
 
-[Quick Start](#🚀-quick-start) · [API Documentation](#📊-api-interface) · [Service Management](#⚙️-service-management) · [Report Issues](https://github.com/superboyyy/server-monitor/issues)
+[Quick Start](#-quick-start) · [API Documentation](#-api-interface) · [Service Management](#️-service-management) · [Report Issues](https://github.com/superboyyy/server-monitor/issues)
 
 </div>
 
