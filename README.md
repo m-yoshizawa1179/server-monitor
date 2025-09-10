@@ -11,7 +11,7 @@
 
 实时监控系统性能指标，提供简洁的 RESTful API 接口
 
-[快速开始](#-快速开始) · [API 文档](#-api-接口) · [部署指南](#-服务管理) · [问题反馈](https://github.com/user/server-monitor/issues)
+[快速开始](#快速开始) · [API 文档](#api-接口) · [部署指南](#️服务管理) · [问题反馈](https://github.com/superboyyy/server-monitor/issues)
 
 </div>
 
