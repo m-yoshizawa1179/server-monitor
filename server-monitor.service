@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=simple
-User=aiden
-WorkingDirectory=/home/aiden/codes/server_monitor
+User=YOUR_USERNAME
+WorkingDirectory=/path/to/server_monitor
 ExecStart=/usr/bin/node server.js
 Restart=always
 RestartSec=10

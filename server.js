@@ -15,17 +15,50 @@ app.use((req, res, next) => {
 // 获取CPU使用率
 function getCPUUsage() {
     return new Promise((resolve) => {
-        const startMeasure = process.cpuUsage();
-        const startTime = Date.now();
-        
-        setTimeout(() => {
-            const endMeasure = process.cpuUsage(startMeasure);
-            const endTime = Date.now();
-            const totalTime = (endTime - startTime) * 1000; // 转换为微秒
-            const totalUsage = endMeasure.user + endMeasure.system;
-            const cpuPercent = Math.round((totalUsage / totalTime) * 100);
-            resolve(Math.min(cpuPercent, 100));
-        }, 100);
+        // 读取/proc/stat获取系统CPU使用率
+        fs.readFile('/proc/stat', 'utf8', (err, data) => {
+            if (err) {
+                resolve(0);
+                return;
+            }
+            
+            const lines = data.split('\n');
+            const cpuLine = lines[0]; // 第一行是总CPU统计
+            const cpuTimes = cpuLine.split(/\s+/).slice(1).map(Number);
+            
+            // CPU时间：user, nice, system, idle, iowait, irq, softirq, steal
+            const [user, nice, system, idle, iowait, irq, softirq, steal] = cpuTimes;
+            
+            // 计算总时间和空闲时间
+            const totalTime = user + nice + system + idle + iowait + irq + softirq + steal;
+            const idleTime = idle + iowait;
+            
+            // 等待一段时间后再次读取
+            setTimeout(() => {
+                fs.readFile('/proc/stat', 'utf8', (err2, data2) => {
+                    if (err2) {
+                        resolve(0);
+                        return;
+                    }
+                    
+                    const lines2 = data2.split('\n');
+                    const cpuLine2 = lines2[0];
+                    const cpuTimes2 = cpuLine2.split(/\s+/).slice(1).map(Number);
+                    
+                    const [user2, nice2, system2, idle2, iowait2, irq2, softirq2, steal2] = cpuTimes2;
+                    const totalTime2 = user2 + nice2 + system2 + idle2 + iowait2 + irq2 + softirq2 + steal2;
+                    const idleTime2 = idle2 + iowait2;
+                    
+                    // 计算时间差
+                    const totalDiff = totalTime2 - totalTime;
+                    const idleDiff = idleTime2 - idleTime;
+                    
+                    // 计算CPU使用率
+                    const cpuPercent = totalDiff > 0 ? Math.round((1 - idleDiff / totalDiff) * 100) : 0;
+                    resolve(Math.max(0, Math.min(cpuPercent, 100)));
+                });
+            }, 100);
+        });
     });
 }
 

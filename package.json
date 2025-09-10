@@ -1,0 +1,36 @@
+{
+  "name": "server-monitor",
+  "version": "1.0.0",
+  "description": "A lightweight Node.js server monitoring API service that provides real-time system performance metrics",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "monitor",
+    "system",
+    "metrics",
+    "api",
+    "performance",
+    "cpu",
+    "memory",
+    "disk",
+    "load"
+  ],
+  "author": "Aiden",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "homepage": "https://github.com/superboyyy/server-monitor#readme"
+}
