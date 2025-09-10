@@ -119,9 +119,15 @@ install_system_service() {
         systemctl stop "$SERVICE_NAME"
     fi
     
-    # 复制服务文件
-    cp "$SERVICE_FILE" /etc/systemd/system/
-    print_info "服务文件已复制到 /etc/systemd/system/"
+    # 复制并修改服务文件
+    local system_service_file="/etc/systemd/system/${SERVICE_NAME}.service"
+    cp "$SERVICE_FILE" "$system_service_file"
+    
+    # 替换占位符
+    sed -i "s|YOUR_USERNAME|$USER|g" "$system_service_file"
+    sed -i "s|/path/to/server_monitor|$SCRIPT_DIR|g" "$system_service_file"
+    
+    print_info "服务文件已复制到 /etc/systemd/system/ 并更新配置"
     
     # 重新加载systemd
     systemctl daemon-reload
